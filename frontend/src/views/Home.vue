@@ -1,10 +1,17 @@
 <template>
   <div class="home">
     <h1>Bienvenue sur CaCaoCritics</h1>
-    <input type="text" v-model="moviename" />
+    <img alt="Vue logo" src="../assets/logo.png" />
+    <br />
+    <input type="text" v-model="moviename" placeholder="enter a movie name"/>
     <div class="film-name">Le film est : {{ moviename }}</div>
     <li v-for="movie in movies" :key="movie.id">
-      {{ movie.title }}
+    <p>
+      {{ movie.title }} 
+    </p>
+    <p>
+      <img :src= "'https://image.tmdb.org/t/p/original/' + movie.poster_path" withd="100" height="300" />
+    </p>
     </li>
   </div>
 </template>
@@ -16,7 +23,7 @@ export default {
   name: "Home",
   data: function () {
     return {
-      moviename: "test",
+      moviename: "",
       movies: [],
       moviesLoadingError: "",
     };
@@ -63,6 +70,6 @@ li {
 }
 
 a {
-  color: #42b983;
+  color: #FF68AD;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="banner">
-    <img alt="Vue logo" src="../assets/logo.png" />
+   <Text>CaCaoCritics</Text>
   </div>
 </template>
 
@@ -12,6 +12,7 @@ export default {
 
 <style>
 .banner {
-  text-align: center;
+  text-align: left;
+  background-color: #FF68AD;
 }
 </style>
