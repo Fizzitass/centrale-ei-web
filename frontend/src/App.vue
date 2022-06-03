@@ -1,25 +1,23 @@
 <template>
-  <div class="nav">
-    <router-link class="nav-link" to="/">Home</router-link> |
-    <router-link class="nav-link" to="/counter">Counter</router-link> |
-    <router-link class="nav-link" to="/users">Users</router-link> |
-    <router-link class="nav-link" to="/about">About</router-link>
-  </div>
+  <Banner />
+  <NavBar />
   <router-view />
+  <Footer />
 </template>
 
-<style scoped>
-.nav {
-  text-align: center;
-  padding: 30px;
-}
+<script>
+import NavBar from "@/components/NavBar.vue";
+import Footer from "@/components/Footer.vue";
+import Banner from "@/components/Banner.vue";
 
-.nav-link {
-  font-weight: bold;
-  color: #2c3e50;
-}
+export default {
+  name: "App",
+  components: {
+    NavBar,
+    Footer,
+    Banner,
+  },
+};
+</script>
 
-.nav-link.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<style scoped></style>
