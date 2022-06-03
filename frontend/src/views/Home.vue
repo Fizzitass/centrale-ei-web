@@ -2,6 +2,8 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <h1>Welcome to Your Vue.js App</h1>
+    <input type="text"  v-model="moviename" />
+    <div class="film-name">Le film est : {{ moviename }}</div>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
@@ -79,6 +81,11 @@
 <script>
 export default {
   name: "Home",
+  data: function () {
+    return {
+      moviename: 'test',
+    };
+  },
 };
 </script>
 
